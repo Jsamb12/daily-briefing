@@ -4,8 +4,21 @@
     "longitude": -2.7967, 
     "timezone": "Europe/London", 
     "headlines_limit": 7, 
-    "focus_list": [
-        "Do one hard thing early.", 
-        "Keep it simple: one task at a time."
+    "quotes": [
+        "Do the next useful thing.",
+        "Clarity comes from action, not from thought alone.",
+        "What you practise grows stronger.",
+        "Small improvements compound faster than big intentions.",
+        "Consistency beats intensity when no one is watching.",
+        "You don’t need confidence to start; you get confidence by starting.",
+        "Make decisions that your future self won’t resent.",
+        "If it’s important, give it a place in the day.",
+        "Most things are solved by showing up calmly and often.",
+        "Progress is usually quiet.",
+        "Choose the hard thing that makes tomorrow easier.",
+        "Energy follows attention.",
+        "Good systems save you from relying on motivation.",
+        "Act as if your time actually matters.",
+        "Finish what you begin, even if it’s imperfect."
     ]
 }
