@@ -1,16 +1,34 @@
+from pathlib import Path
 from src.config import load_config
-from src.weather import fetch_weather
+from src.weather import fetch_weather, summarise_current_weather
 
 def main():
+    # Load configuration
     config = load_config()
-    weather = fetch_weather(
+
+    # Fetch and summarise weather data
+    raw_weather = fetch_weather(
         latitude=config["latitude"],
         longitude=config["longitude"],
         timezone=config["timezone"],
     )
+    summary = summarise_current_weather(raw_weather)
 
-    print("Current Temperature:", weather["current"]["temperature_2m"])
+    # Prepare briefing content
+    briefing_content = (
+        f"Daily Briefing:\n"
+        f"Time:{summary['time']}\n"
+        f"Temperature:{summary['temperature']}°C\n"
+        f"Wind Speed:{summary['wind_speed']} km/h\n"
+        f"Precipitation:{summary['precipitation']} mm\n"
+        f"Precipitation Probability:{summary['precipitation_probability']}%\n"
+    )
 
+    out_path = Path("output/briefing.txt")
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    out_path.write_text(briefing_content, encoding="utf-8")
+
+    print(f"Briefing written to {out_path.resolve()}") # .resolve() converts a relatuve path to an absolute path
 
 if __name__ == "__main__":
     main()
