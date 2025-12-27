@@ -1,0 +1,11 @@
+{
+    "location_name": "St Andrews",
+    "latitude": 56.3398,
+    "longitude": -2.7967, 
+    "timezone": "Europe/London", 
+    "headlines_limit": 7, 
+    "focus_list": [
+        "Do one hard thing early.", 
+        "Keep it simple: one task at a time."
+    ]
+}
