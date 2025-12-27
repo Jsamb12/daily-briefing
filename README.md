@@ -1,4 +1,4 @@
-# Daily Briefind (Python)
+# Daily Briefing (Python)
 
 A small personal Python project that generates a daily Markdown briefing with: 
 - current weather (via Open-Meteo)
